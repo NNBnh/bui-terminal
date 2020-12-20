@@ -1,0 +1,66 @@
+#!/bin/sh
+
+#     ____  __  ______
+#    / __ )/ / / /  _/
+#   / __  / / / // /
+#  / /_/ / /_/ // /
+# /_____/\____/___/
+#
+
+# File:         bui-terminal
+# Description:  Terminal colorscheme that SuperB
+# Author:       NNB
+#               └─ https://github.com/NNBnh
+# URL:          https://github.com/NNBnh/bui
+# License:      GPLv3
+
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License as published by
+#    the Free Software Foundation, either version 3 of the License, or
+#    (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+#
+#    You should have received a copy of the GNU General Public License
+#    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+
+# Functions
+set_color() {
+	[ "$backslash" = 'true' ] && print="$print\\"
+
+	print="$print\033]$1;#${2#\#}\033\\"
+
+	backslash='true'
+}
+
+
+# Start
+[ -n "$BUI_COLOR_FOREGROUND" ] && set_color '10' "$BUI_COLOR_FOREGROUND"
+[ -n "$BUI_COLOR_BACKGROUND" ] && {
+	set_color '11'  "$BUI_COLOR_BACKGROUND"
+	set_color '708' "$BUI_COLOR_BACKGROUND"
+}
+[ -n "$BUI_COLOR_CURSOR" ] && set_color '12' "$BUI_COLOR_CURSOR"
+
+i='0'
+
+while [ "$i" -le '255' ]; do
+	case "${#i}" in
+		'1') color="00$i" ;;
+		'2') color="0$i"  ;;
+		*)   color="$i"   ;;
+	esac
+
+	eval "[ -n \"\$BUI_COLOR_TERMINAL$color\" ] && set_color '4;$i' \"\$BUI_COLOR_TERMINAL$color\""
+
+	i=$(( i + 1 ))
+done
+
+printf "$print"
+
+
+exit 0
