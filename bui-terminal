@@ -8,7 +8,7 @@
 #
 
 # File:         bui-terminal
-# Description:  Terminal colorscheme that SuperB
+# Description:  Terminal COLORScheme that SuperB
 # Author:       NNB
 #               └─ https://github.com/NNBnh
 # URL:          https://github.com/NNBnh/bui
@@ -28,6 +28,14 @@
 #    along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 
+# Values
+if [ "$TERM" = 'linux' ]; then
+	COLORS='15'
+else
+	COLORS='255'
+fi
+
+
 # Functions
 set_16() {
 	print="$print\033]P$(printf '%x' "$1")${2#\#}"
@@ -43,22 +51,18 @@ set_rgb() {
 
 
 # Start
-if [ "$TERM" = 'linux' ]; then
-	colors='15'
-else
-	colors='255'
-
+[ "$TERM" = 'linux' ] && {
 	[ -n "$BUI_COLOR_FOREGROUND" ] && set_rgb '10' "$BUI_COLOR_FOREGROUND"
 	[ -n "$BUI_COLOR_BACKGROUND" ] && {
 		set_rgb '11'  "$BUI_COLOR_BACKGROUND"
 		set_rgb '708' "$BUI_COLOR_BACKGROUND"
 	}
 	[ -n "$BUI_COLOR_CURSOR" ] && set_rgb '12' "$BUI_COLOR_CURSOR"
-fi
+}
 
 i='0'
 
-while [ "$i" -le "$colors" ]; do
+while [ "$i" -le "$COLORS" ]; do
 	case "${#i}" in
 		'1') color="00$i" ;;
 		'2') color="0$i"  ;;
