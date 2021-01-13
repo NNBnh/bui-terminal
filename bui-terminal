@@ -51,7 +51,7 @@ set_rgb() {
 
 
 # Start
-[ "$TERM" = 'linux' ] && {
+[ "$TERM" != 'linux' ] && {
 	[ -n "$BUI_COLOR_FOREGROUND" ] && set_rgb '10' "$BUI_COLOR_FOREGROUND"
 	[ -n "$BUI_COLOR_BACKGROUND" ] && {
 		set_rgb '11'  "$BUI_COLOR_BACKGROUND"
