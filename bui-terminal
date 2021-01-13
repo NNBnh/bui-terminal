@@ -29,7 +29,11 @@
 
 
 # Functions
-set_color() {
+set_16() {
+	print="$print\033]P$(printf '%x' "$1")${2#\#}"
+}
+
+set_rgb() {
 	[ "$backslash" = 'true' ] && print="$print\\"
 
 	print="$print\033]$1;#${2#\#}\033\\"
@@ -39,23 +43,33 @@ set_color() {
 
 
 # Start
-[ -n "$BUI_COLOR_FOREGROUND" ] && set_color '10' "$BUI_COLOR_FOREGROUND"
-[ -n "$BUI_COLOR_BACKGROUND" ] && {
-	set_color '11'  "$BUI_COLOR_BACKGROUND"
-	set_color '708' "$BUI_COLOR_BACKGROUND"
-}
-[ -n "$BUI_COLOR_CURSOR" ] && set_color '12' "$BUI_COLOR_CURSOR"
+if [ "$TERM" = 'linux' ]; then
+	colors='15'
+else
+	colors='255'
+
+	[ -n "$BUI_COLOR_FOREGROUND" ] && set_rgb '10' "$BUI_COLOR_FOREGROUND"
+	[ -n "$BUI_COLOR_BACKGROUND" ] && {
+		set_rgb '11'  "$BUI_COLOR_BACKGROUND"
+		set_rgb '708' "$BUI_COLOR_BACKGROUND"
+	}
+	[ -n "$BUI_COLOR_CURSOR" ] && set_rgb '12' "$BUI_COLOR_CURSOR"
+fi
 
 i='0'
 
-while [ "$i" -le '255' ]; do
+while [ "$i" -le "$colors" ]; do
 	case "${#i}" in
 		'1') color="00$i" ;;
 		'2') color="0$i"  ;;
 		*)   color="$i"   ;;
 	esac
 
-	eval "[ -n \"\$BUI_COLOR_TERMINAL$color\" ] && set_color '4;$i' \"\$BUI_COLOR_TERMINAL$color\""
+	if [ "$TERM" = 'linux' ]; then
+		eval "[ -n \"\$BUI_COLOR_TERMINAL$color\" ] && set_16 '$i' \"\$BUI_COLOR_TERMINAL$color\""
+	else
+		eval "[ -n \"\$BUI_COLOR_TERMINAL$color\" ] && set_rgb '4;$i' \"\$BUI_COLOR_TERMINAL$color\""
+	fi
 
 	i=$(( i + 1 ))
 done
