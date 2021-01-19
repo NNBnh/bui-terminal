@@ -32,6 +32,12 @@
 if [ "$TERM" = 'linux' ]; then
 	COLORS='15'
 else
+	if [ "$BUI_CURSOR_BLINK" = 'false' ]; then
+		CURSOR_BLINK='1'
+	else
+		CURSOR_BLINK='0'
+	fi
+
 	COLORS='255'
 fi
 
@@ -52,6 +58,12 @@ set_rgb() {
 
 # Start
 [ "$TERM" != 'linux' ] && {
+	case "$BUI_CURSOR" in
+		'block')     print="$print\033[$(( 1 + CURSOR_BLINK )) q" ;;
+		'beam')      print="$print\033[$(( 5 + CURSOR_BLINK )) q" ;;
+		'underline') print="$print\033[$(( 3 + CURSOR_BLINK )) q" ;;
+	esac
+
 	[ -n "$BUI_COLOR_FOREGROUND" ] && set_rgb '10' "$BUI_COLOR_FOREGROUND"
 	[ -n "$BUI_COLOR_BACKGROUND" ] && {
 		set_rgb '11'  "$BUI_COLOR_BACKGROUND"
