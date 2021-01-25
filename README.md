@@ -1,6 +1,6 @@
 <h1 align="center"><code>bui-terminal</code></h1>
 <p align="center">Terminal colorscheme that <i>SuperB</i></p>
-<p align="center"><img src="https://img.shields.io/github/license/NNBnh/bui-terminal?labelColor=073551&color=4EAA25&style=for-the-badge" alt="License: GPL-3.0"> <img src="https://img.shields.io/github/languages/top/NNBnh/b.sh?logo=gnu-bash&labelColor=073551&color=4EAA25&logoColor=FFFFFF&style=for-the-badge" alt="Shell: 100%"> <img src="https://img.shields.io/github/last-commit/NNBnh/bui-terminal?labelColor=073551&color=4EAA25&style=for-the-badge"></p>
+<p align="center"><img src="https://img.shields.io/github/license/NNBnh/bui-terminal?labelColor=073551&color=4EAA25&style=for-the-badge" alt="License: GPL-3.0"> <img src="https://img.shields.io/github/languages/top/NNBnh/bui-terminal?logo=gnu-bash&labelColor=073551&color=4EAA25&logoColor=FFFFFF&style=for-the-badge" alt="Shell: 100%"> <img src="https://img.shields.io/github/last-commit/NNBnh/bui-terminal?labelColor=073551&color=4EAA25&style=for-the-badge"></p>
 <p align="center"><img src="https://img.shields.io/github/watchers/NNBnh/bui-terminal?labelColor=073551&color=4EAA25&style=flat-square"> <img src="https://img.shields.io/github/stars/NNBnh/bui-terminal?labelColor=073551&color=4EAA25&style=flat-square"> <img src="https://img.shields.io/github/forks/NNBnh/bui-terminal?labelColor=073551&color=4EAA25&style=flat-square"> <img src="https://img.shields.io/github/issues/NNBnh/bui-terminal?labelColor=073551&color=4EAA25&style=flat-square"></p>
 
 ## About
