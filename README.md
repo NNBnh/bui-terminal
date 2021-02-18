@@ -1,6 +1,6 @@
 <h1 align="center"><code>bui-terminal</code></h1>
 <p align="center">Terminal colorscheme that <i>SuperB</i></p>
-<p align="center"><img src="https://img.shields.io/github/license/NNBnh/bui-terminal?labelColor=073551&color=4EAA25&style=for-the-badge" alt="License: GPL-3.0"> <img src="https://img.shields.io/github/languages/top/NNBnh/bui-terminal?logo=gnu-bash&labelColor=073551&color=4EAA25&logoColor=FFFFFF&style=for-the-badge" alt="Shell: 100%"> <img src="https://img.shields.io/github/last-commit/NNBnh/bui-terminal?labelColor=073551&color=4EAA25&style=for-the-badge"></p>
+<p align="center"><img src="https://img.shields.io/github/license/NNBnh/bui-terminal?labelColor=073551&color=4EAA25&style=for-the-badge" alt="License: GPL-3.0"> <img src="https://img.shields.io/github/last-commit/NNBnh/bui-terminal?labelColor=073551&color=4EAA25&style=for-the-badge"></p>
 <p align="center"><img src="https://img.shields.io/github/watchers/NNBnh/bui-terminal?labelColor=073551&color=4EAA25&style=flat-square"> <img src="https://img.shields.io/github/stars/NNBnh/bui-terminal?labelColor=073551&color=4EAA25&style=flat-square"> <img src="https://img.shields.io/github/forks/NNBnh/bui-terminal?labelColor=073551&color=4EAA25&style=flat-square"> <img src="https://img.shields.io/github/issues/NNBnh/bui-terminal?labelColor=073551&color=4EAA25&style=flat-square"></p>
 
 ## About
@@ -36,7 +36,19 @@ ln -s ~/.local/share/bui-terminal/bui-terminal ~/.local/bin/bui-terminal
 ```
 
 #### Package manager
-`#TODO`
+For [`bpkg`](https://github.com/bpkg/bpkg) user:
+
+```sh
+bpkg install NNBnh/bui-terminal
+```
+
+For [Basher](https://github.com/bpkg/bpkg) user:
+
+```sh
+basher install NNBnh/bui-terminal
+```
+
+###### If you can and want to port BUI terminal to other package managers, feel free to do so.
 
 ## Usage
 Run `bui-terminal` in the terminal:
