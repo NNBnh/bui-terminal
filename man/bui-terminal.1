@@ -1,0 +1,24 @@
+.TH BUI-TERMINAL "1" "2021" "NNB" "User Commands"
+.SH NAME
+BUI terminal \- Terminal colorscheme that SuperB
+.SH SYNOPSIS
+.B bui-terminal
+.SH DESCRIPTION
+BUI terminal is a color scheme tool written in pure sh that change terminal colors on-the-fly independent of terminal emulator and uses BUI environment variables.
+.SH ENVIRONMENT VARIABLES
+\fBBUI_COLOR_FOREGROUND\fR
+Terminal's foreground
+.TP
+\fBBUI_COLOR_BACKGROUND\fR
+Terminal's background
+.TP
+\fBBUI_COLOR_CURSOR\fR
+Cursor shape, can be block, beam or underline
+.TP
+\fBBUI_CURSOR_BLINK\fR
+Cursor blink (default: true)
+.TP
+\fBBUI_COLOR_TERMINAL<number>\fR
+Color <number> hex (e.g: BUI_COLOR_TERMINAL011=#F7CA88)
+.SH REPORTING BUGS
+Report bugs to https://github.com/NNBnh/bui-terminal/issues
