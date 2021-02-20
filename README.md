@@ -4,7 +4,7 @@
 <p align="center"><img src="https://img.shields.io/github/watchers/NNBnh/bui-terminal?labelColor=073551&color=4EAA25&style=flat-square"> <img src="https://img.shields.io/github/stars/NNBnh/bui-terminal?labelColor=073551&color=4EAA25&style=flat-square"> <img src="https://img.shields.io/github/forks/NNBnh/bui-terminal?labelColor=073551&color=4EAA25&style=flat-square"> <img src="https://img.shields.io/github/issues/NNBnh/bui-terminal?labelColor=073551&color=4EAA25&style=flat-square"></p>
 
 ## About
-`bui-terminal` is a color scheme tool written in [`pure sh`](https://github.com/dylanaraps/pure-sh-bible) that change terminal colors on-the-fly independent of terminal emulator and uses [BUI environment variables](https://github.com/NNBnh/dots/wiki/bui).
+`bui-terminal` is a color scheme tool written in [`portable shell`](https://github.com/dylanaraps/pure-sh-bible) that change terminal colors on-the-fly independent of terminal emulator and uses [BUI environment variables](https://github.com/NNBnh/dots/wiki/bui).
 
 ## Contents
 - [About](#about)
