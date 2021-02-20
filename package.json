@@ -1,0 +1,10 @@
+
+{
+  "name": "bui-terminal",
+  "version": "1.2.1",
+  "description": "Terminal colorscheme that SuperB",
+  "global": "true",
+  "scripts": ["bin/bui-terminal"],
+  "files": ["man/bui-terminal.1"],
+  "install": "make install"
+}
