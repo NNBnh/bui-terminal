@@ -1,10 +1,10 @@
 <h1 align="center"><code>bui-terminal</code></h1>
-<p align="center">Terminal colorscheme that <i>SuperB</i></p>
+<p align="center">BUI for terminal</p>
 <p align="center"><img src="https://img.shields.io/github/license/NNBnh/bui-terminal?labelColor=073551&color=4EAA25&style=for-the-badge" alt="License: GPL-3.0"> <img src="https://img.shields.io/github/last-commit/NNBnh/bui-terminal?labelColor=073551&color=4EAA25&style=for-the-badge"></p>
 <p align="center"><img src="https://img.shields.io/github/watchers/NNBnh/bui-terminal?labelColor=073551&color=4EAA25&style=flat-square"> <img src="https://img.shields.io/github/stars/NNBnh/bui-terminal?labelColor=073551&color=4EAA25&style=flat-square"> <img src="https://img.shields.io/github/forks/NNBnh/bui-terminal?labelColor=073551&color=4EAA25&style=flat-square"> <img src="https://img.shields.io/github/issues/NNBnh/bui-terminal?labelColor=073551&color=4EAA25&style=flat-square"></p>
 
 ## About
-`bui-terminal` is a color scheme tool written in [`portable sh`](https://github.com/dylanaraps/pure-sh-bible) that change terminal colors on-the-fly independent of terminal emulator and uses [BUI environment variables](https://github.com/NNBnh/dots/wiki/bui).
+`bui-terminal` is an UI tool written in [`portable sh`](https://github.com/dylanaraps/pure-sh-bible) that change terminal colors on-the-fly independent of terminal emulator and uses [BUI environment variables](https://github.com/NNBnh/dots/wiki/bui).
 
 ## Contents
 - [About](#about)
