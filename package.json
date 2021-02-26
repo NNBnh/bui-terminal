@@ -2,7 +2,7 @@
 {
   "name": "bui-terminal",
   "version": "1.2.1",
-  "description": "Terminal colorscheme that SuperB",
+  "description": "BUI for terminal",
   "global": "true",
   "scripts": ["bin/bui-terminal"],
   "files": ["man/bui-terminal.1"],
